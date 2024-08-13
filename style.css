@@ -1,5 +1,12 @@
 /* styles.css */
 
+.grey-qo-regular {
+    font-family: "Grey Qo", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,6 +15,11 @@ body {
     color: #333;
 }
 
+.logo {
+    font-family: "Grey Qo", cursive;
+    color: #4d07cf;
+    margin-left: 20px;
+}
 header {
     display: flex;
     justify-content: space-between;
@@ -49,6 +61,7 @@ nav ul li a {
 .hero-content {
     max-width: 600px;
     margin-right: 50px;
+    margin-left: 100px;
 }
 
 .hero h1 {
@@ -62,7 +75,7 @@ nav ul li a {
 }
 
 .highlight {
-    color: #7d3cf8;
+    color: #4d07cf;
     font-weight: bold;
 }
 
@@ -80,11 +93,21 @@ nav ul li a {
 .btn {
     display: inline-block;
     padding: 12px 24px;
-    background-color: #7d3cf8;
-    color: #fff;
+    background-color:#4d07cf;
+    color: #ffffff;
     text-decoration: none;
     border-radius: 30px;
     font-weight: bold;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative; 
 }
 
 .btn.secondary {
@@ -111,7 +134,7 @@ nav ul li a {
         margin-top: 30px;
     }
 }
-/* Add this to your CSS file (styles.css) */
+
 
 #typing-text::after {
     content: '|';
@@ -120,6 +143,29 @@ nav ul li a {
     animation: blink-cursor 1s infinite;
     margin-left: 2px;
 }
+
+
+
+.profile-container {
+    position: relative;
+    width: 250px; /* Set the width of the container */
+    height: 250px; /* Set the height of the container */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    animation: fadeEffect 10s; /* 6s for the entire fade in and out cycle */
+}
+
+@keyframes fadeEffect {
+    0%, 100% { opacity: 0;}
+    50% { opacity: 1; }
+}
+
 
 @keyframes blink-cursor {
     0% { opacity: 1; }
